@@ -1,0 +1,140 @@
+/*-------------------------- SKIN 文件分离说明----------------------------*/
+/*    一般情况下的标准，仅供参考，具体情况需具体分析                      */
+/*    边框 border                                                         */
+/*    颜色 color                                                          */
+/*    背景 background                                                     */
+/*    所有css3新增属性                                                    */
+/*-------------------------- SKIN 文件分离说明----------------------------*/
+body { color: #333; background-color: #e2ebf4; }
+a { color: #2f4982; }
+img { border: 0 none; }
+/*------------------------- TIPS -----------------------------*/
+.t_suc { color: #2c8b49; }/*成功*/
+.t_war { color: #fe6700; }/*警告*/
+.t_inf { color: #e9ac5c; }/*信息*/
+.t_req { color: #ff6501; }/*必填*/
+.t_tip { color: #9a9a9a; }/*弱信息*/
+.t_num { color: #61a222; font-weight: 600; text-decoration: underline; }
+.sys_tip { color: #fff; border-radius: 2px; /*box-shadow: 0 0 1px #333;*/ }
+.sys_suc { background: #2c8939; }
+.sys_war { background: #da0010; }
+/*------------------------- LOADING -----------------------------*/
+.l_con { border: 1px solid #6f9d76; background: url("../images/skin1/gradient.jpg") 0 -148px repeat-x; }
+.l_in { background: url("../images/skin1/gradient.jpg") 0 -121px repeat-x; }
+.l_in_err { background-position: 0 -136px; }
+/*------------------------- DATAGRID-----------------------------*/
+.std_ctrl { background: url("../images/skin1/gradient.jpg") 0 0 repeat-x; border: 1px solid #99bce8; border-bottom: 0 none; color: #99BCE8; }
+	.std_ctrl span { color: #333; }
+.std_table { border: 1px solid #99bce8; /*only work in IE67*/ }
+.std_table { background: url("../images/std_tab_tb.png") 0 51px repeat; }
+	.std_table tbody tr:hover { background-color: #ffffe1; }
+	.std_table tr th,
+    .std_table tr td { border: 1px solid #d0d0d0; }
+	.std_table tr th { background: url("../images/skin1/gradient.jpg") 0 -40px repeat-x; }
+	.std_table tfoot tr td { background: url("../images/skin1/gradient.jpg") 0 -86px repeat-x; }
+		.std_table tfoot tr td.tool { background: #fafafa; }
+/*------------------------- FORM -----------------------------*/
+.ipt_txt,
+.ipt_txt_s,
+.ipt_extxt,
+.ipt_title { border: 1px solid #b5b8c9; background: #fff url("../images/skin1/ipt_bg.png") 0 -0 repeat-x; }
+.ipt_extxt span{ background:url("../images/skin1/element.png") -463px -43px no-repeat; }
+.ipt_extxt span:hover{ background-position: -446px -43px;}
+.ipt_extxt .mini a { background: url("../images/skin1/element.png") no-repeat; }
+	.ipt_extxt .mini a.mini_inc { background-position: -463px -3px; }
+		.ipt_extxt .mini a.mini_inc:hover { background-position: -446px -3px; }
+	.ipt_extxt .mini a.mini_dec { background-position: -463px -13px; }
+.ipt_extxt .mini .mini_dec:hover { background-position: -446px -13px; }
+.std_form .tarea { border: 1px solid #b5b8c9; background: #fff url("../images/skin1/ipt_bg.png") 0 -0 repeat-x; }
+.std_photo .photo { border: 1px solid #9cb8cd; background-color: #fff; }
+/*------------------------- ICONS -----------------------------*/
+.s_ico,.x_ico,.b_ico,.m_ico { background: url("../images/icons.png") 0 0 no-repeat; }
+.s_ico_add { background-position: 0 0; }
+.s_ico_del { background-position: -19px 0; }
+.s_ico_edit { background-position: -38px 0; }
+.s_ico_suc { background-position: -58px 0; }
+.s_ico_war { background-position: -79px 0; }
+.s_ico_inf { background-position: -100px 0; }
+.s_ico_right { background-position: -119px 0; }
+.s_ico_wrong { background-position: -135px 0; }
+.s_ico_view { background-position: -150px 0; }
+.s_ico_sor_nev { background-position: -113px -17px; }
+.s_ico_sor_dow { background-position: -1px -14px; }
+.s_ico_sor_up { background-position: -18px -14px; }
+.s_ico_rep { background-position: -39px -17px; /*折叠*/ }
+.s_ico_spr { background-position: -58px -17px; /*展开*/ }
+.s_ico_clh { background-position: -79px -18px; }
+.s_ico_cl { background-position: -101px -18px; }
+.x_ico_date { background-position: 0 -32px; }
+.x_ico_search { background-position: -19px -32px; }
+.x_ico_color { background-position: -38px -32px; }
+.x_ico_left{ background-position:-81px -32px; }
+.x_ico_right{ background-position: -60px -32px;}
+.x_ico_allleft{ background-position:-123px -32px;}
+.x_ico_allright{ background-position:-102px -32px;}
+.m_ico_staff { background-position: 0 -161px; }
+.m_ico_rfid { background-position: -41px -161px; }
+.m_ico_gate { background-position: -78px -161px; }
+.m_ico_parking { background-position: -118px -161px; }
+.m_ico_setting { background-position: -156px -161px; }
+.m_ico_anchor{ background-position: -195px -161px; }
+.m_ico_lib{ background-position: -233px -161px;}
+.b_ico_inf { background-position: 0 -96px; }
+.b_ico_suc { background-position: -67px -96px; }
+.b_ico_err { background-position: -130px -96px; }
+.b_ico_war { background-position: -190px -96px; }
+/*------------------------- BUTTONS -----------------------------*/
+.btn { background-image: url("../images/skin1/element.png"); color: #233b77; }
+.btn_deep { color: #fff; background-position: 0 -27px; }
+.b_btn { background: url("../images/skin1/element.png") 0 -56px no-repeat; color: #233b77; }
+.b_btn_deep { color: #fff; background-position: 0 -95px; }
+.h_btn_uploadimg { background: url("../images/upload_img_btn.png") 0 0 no-repeat; text-indent: -9999px; }
+/*------------------------- SIDEBAR -----------------------------*/
+.sidebar { border: 1px solid #95b2da; color: #253f72; /*border-top: 0 none;*/ }
+	.sidebar .sidebar_item { background: #c1d5ed url("../images/skin1/gradient.jpg") 0 -184px repeat-x; border-style: solid; border-width: 1px; border-color: #a5bddf #e5ecf6 #95b3d9 #e5ecf6 ; }
+	.sidebar .first { border-top: 0 none; }
+	.sidebar .sidebar_foot { border-top: 1px solid #fff; border-bottom: 1px solid #95b2da; }
+	.sidebar .n_sub1 { border: 1px solid; border-color: #fff #e2ebf4 #e2ebf4 #e2ebf4; }
+		.sidebar .n_sub1 li { background: url("../images/skin1/element.png") 20px -134px no-repeat; }
+			.sidebar .n_sub1 li.sel { background-position: 12px -175px; color: #fff; }
+				.sidebar .n_sub1 li.sel a { color: #fff; }
+.sidegap { background: url("../images/skin1/toggle_bg.png") 0 0 repeat-y; }
+	.sidegap .toggle { background: url("../images/skin1/element.png") -489px 0px no-repeat; }
+	.sidegap .toggle_hide { /*background-position: -489px 0px;*/ }
+	.sidegap .toggle_show { background-position: -489px -43px; }
+/*------------------------- LAYOUT -----------------------------*/
+.frame_top { background-color: #333; }
+.layout_l { border: 1px solid #95b0db; background-color: #f9fdff; }
+.box1 { border: 1px solid #99BCE8; }
+.topline { background: #1b3160; color: #7790c8; }
+	.topline .logo { color: #fff; }
+	.topline .comlink a { color: #c0d4ec; }
+.tabbar { background: url("../images/skin1/gradient.jpg") 0 -215px repeat-x; }
+	.tabbar ul li a { color: #fff; }
+	.tabbar ul li.on { background: url("../images/skin1/element.png") 0 -224px no-repeat; }
+		.tabbar ul li.on span { background: url("../images/skin1/element.png") 100% -280px no-repeat; }
+		.tabbar ul li.on a { color: #1b3160; }
+.hr { border-top: 1px solid #8cb2e3; border-bottom: 1px solid #fff; }
+.hr_s { border-top: 1px solid #c6d8ec; }
+/*------------------------- POP WINDOW -----------------------------*/
+.std_pop { border: 1px solid #a1afca; background-color: #cdd9e7; box-shadow: 0 0 3px #333; }
+	.std_pop .pop_border { border: 1px solid #fff; }
+	.std_pop .pop_title { color: #2f4a81; }
+    .std_pop .pop_main { border: 1px solid #99bbe8;background: #fff;}
+	.std_pop .pop_content { background-color: #fff; }
+.msg { border: 4px solid #d6dee7; background: url("../images/msg.png") no-repeat scroll 6px 0 #fff; }
+/*------------------------- COMPONENT -----------------------------*/
+.path { color: #2f4982; }
+.std_preview { background: #fff; box-shadow: 0 0 5px #333; }
+.droplist{ border: 1px solid #b2b7bc; background: #fff; box-shadow: 1px 1px 0px rgba(180, 180, 180, 0.2)}
+.droplist li a:hover { background-color: #eef4f9 }
+/*------------------------- BOX -----------------------------*/
+.sbox { border: 1px solid #38528a; }
+	.sbox .sbox_head { background: #263d72; color: #fff; }
+		.sbox .sbox_head a { color: #7790C8; }
+		.sbox .sbox_head .s_ico { margin-top: 8px; }
+.aid_box { border-color: #9bb7dc; }
+	.aid_box .sbox_head { background: #c1d5ed url("../images/skin1/gradient.jpg") 0 -273px repeat-x; color: #2e4883; }
+		.aid_box .sbox_head a { color: #2e4883; }
+/*------------------------- DATACHANGELIST -----------------------------*/
+.dataChangeList  select { border: 1px solid #8cb2e3; }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                      http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	<!-- 搜索包过程 -->
+	<context:component-scan base-package="cn.ac.iscas.gz.service.impl" />
+	<context:component-scan base-package="cn.ac.iscas.gz.repository.impl" />
+	
+	<bean id="appContextUtil" class="cn.ac.iscas.gz.util.AppContextUtil"></bean>
+	
+	<!-- 向 Spring MVC 框架注册自定义的属性编辑器 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer" ref="webBindingInitializer"/>
+	</bean>
+	<!-- 日期类型的自定义属性编辑器 -->
+	<bean id="webBindingInitializer" class="cn.ac.iscas.gz.adapter.DateBindingInitializer"></bean>
+	
+</beans>

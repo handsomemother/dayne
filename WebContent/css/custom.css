@@ -1,0 +1,16 @@
+/*自定义css*/
+.edit_table tr{ height: 30px; }
+.edit_table .state_on {
+	background: url("../images/skin1/element.png") no-repeat scroll -381px -4px transparent;
+	display: inline-block;
+	height: 14px;
+	vertical-align: middle;
+	width: 57px;
+}
+.edit_table .state_off {
+	display: inline-block;
+	width: 57px;
+	height: 14px;
+	background: url('../images/skin1/element.png') -381px -23px no-repeat;
+	vertical-align: middle;
+}

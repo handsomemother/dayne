@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	
+	<bean id="dbConfigBean" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"> 
+		<property name="order" value="1" />  
+	    <property name="ignoreUnresolvablePlaceholders" value="true" />  
+		<property name="location"> 
+			<value>classpath:db.properties</value> 
+		</property> 
+	</bean>         
+	
+	<util:properties id="hibernateProperties" location="classpath:/hibernateProperties.properties"/>  
+	
+	<!-- 数据源 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${driverClass}" />
+		<property name="jdbcUrl" value="${jdbcUrl}" />
+		<property name="user" value="${user}"/>
+		<property name="password" value="${password}"/>
+		<property name="minPoolSize" value="${minPoolSize}"/>
+		<property name="maxPoolSize" value="${maxPoolSize}"/>
+		<property name="maxIdleTime" value="${maxIdleTime}"/>
+		<property name="acquireIncrement" value="${acquireIncrement}"/>
+		<property name="maxStatements" value="${maxStatements}"/>
+		<property name="initialPoolSize" value="${initialPoolSize}"/>
+		<property name="idleConnectionTestPeriod" value="${idleConnectionTestPeriod}"/>
+		<property name="acquireRetryAttempts" value="${acquireRetryAttempts}"/>
+		<property name="breakAfterAcquireFailure" value="${breakAfterAcquireFailure}"/>
+		<property name="testConnectionOnCheckout" value="${testConnectionOnCheckout}"/>
+	</bean>	
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties" ref="hibernateProperties"/>
+
+		<property name="packagesToScan">
+			<value>cn.ac.iscas.gz.entity</value>
+		</property>
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="txManager"/>
+	
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>	
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+     
+</beans>

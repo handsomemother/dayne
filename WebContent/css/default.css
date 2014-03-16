@@ -1,0 +1,197 @@
+﻿html { overflow: auto; /*隐藏IE67右侧滚动条区域*/ height: 100%; _overflow-x: hidden; _text-overflow:ellipsis;/*IE6 fixed无抖动*/ }
+body { font-family: "Tahoma","宋体", "Arial Narrow"; font-size: 12px; }
+a { text-decoration: none; }
+select { padding: 1px; max-width: 160px; }
+.wrap { white-space: nowrap; /*不换行*/ overflow: hidden; text-overflow: ellipsis; /*省略号*/ }
+.linb { display: inline-block; *display: inline; *zoom: 1; }
+.move{ cursor: move;}
+/*------------------------- TIPS -----------------------------*/
+.sys_tip { position: fixed; _position: absolute; top: 0;_top:expression(eval(document.documentElement.scrollTop));
+    left: 50%; padding: 4px 10px; z-index: 999; }
+/*------------------------- LOADING -----------------------------*/
+.load { margin-bottom: 12px; height: 12px; line-height: 12px; }
+.l_con { width: 200px; height: 10px; font-size: 0px; }
+.l_in { display: block; width: 1%; height: 10px; font-size: 0px; }
+.l_tp { *margin-left: 4px; height: 10px; vertical-align: top; }
+/*------------------------- DATAGRID-----------------------------*/
+.col0 { width: 30px; }
+.col1 { width: 100px; }
+.col2 { width: 200px; }
+.col3 { width: 300px; }
+.col4 { width: 40px; }
+.col5 { width: 50px; }
+.col6 { width: 60px; }
+.col7 { width: 70px; }
+.std { position: relative; margin: 50px auto; width: 800px; /*overflow: hidden;*/ }
+.std_filter { margin: 20px 0; }
+.std_ctrl { height: 26px; padding: 4px 8px 0; }
+.std_ctrl * { vertical-align: middle; }
+.std_tdiv{ width: 100%; height: auto;  overflow: auto; zoom:1; }
+.std_table { table-layout: fixed; width: 100%; /*_width:99.75%;*/ /*_width:99.5%;*/ }
+	.std_table tr th,
+    .std_table tr td { padding: 0 8px; height: 24px; line-height: 24px; white-space: nowrap; /*不换行*/ overflow: hidden; text-overflow: ellipsis; /*省略号*/ cursor: default; }
+	.std_table tr th.col0,
+    .std_table tr td.col0 { padding: 0; }
+	.std_table tr th.sort { cursor: pointer; }
+	.std_table tfoot tr td { height: 30px; line-height: 30px; vertical-align: middle; }
+		.std_table tfoot tr td.tool { height: 24px; line-height: 24px; }
+		.std_table tfoot tr td.tf_l { text-align: left; border-right: none; }
+		.std_table tfoot tr td.tf_r { text-align: right; border-left: none; }
+        .std_table input{vertical-align: text-bottom;}
+        .std_table .state_on{ display: inline-block; width: 57px; height: 14px; background: url('../images/skin1/element.png') -381px -4px no-repeat;vertical-align: middle;}
+        .std_table .state_off{ display: inline-block; width: 57px; height: 14px; background: url('../images/skin1/element.png') -381px -23px no-repeat;vertical-align: middle;}
+        .std_table .load{ margin: 0;}
+        .std_table .l_con{ width: 150px;}
+        .std_table .ipt_txt{ height: 16px; line-height: 16px; }
+
+.stable { table-layout: fixed; width: 100%; border-spacing: 0; border: 1px solid #dadada; }
+.stable th,.stable td { padding: 0 8px; line-height: 30px; border: 1px solid #dadada; }
+/*------------------------- FORM -----------------------------*/
+.caption { margin: 14px 0; padding: 0 8px; font-size: 14px; font-weight: 600; }
+.std_form * { vertical-align: middle; }
+.std_form p { margin-bottom: 14px; line-height: 14px; }
+.lab { display: inline-block; width: 100px; text-align: right; }
+.lab_long { width: 120px; }
+.lab_short { width: 50px; }
+.ipt_txt,
+.ipt_txt_s,
+.ipt_extxt { padding: 0 0 0 0.2em; height: 20px; line-height: 20px;z-index: 99; }
+.ipt_txt_s{width: 60px;}
+.ipt_title { padding: 0 0 0 0.4em; width: 80%; height: 30px; line-height: 30px; font-size: 16px; font-weight: 600; }
+.ipt_extxt { position: relative; display: inline-block; *margin-right: 4px; *display:inline;  *zoom:1 }
+	.ipt_extxt input { width: 130px; margin-right: 4px; height: 20px; line-height: 20px;_height:18px;_line_height:18px; border: 0 none; background: transparent; vertical-align: middle; }
+    .ipt_extxt span{ display:inline-block; margin-left: 2px;  width:17px;  height:20px; font-size: 0; line-height: 0; vertical-align:top;  cursor:pointer;}
+	.ipt_extxt .droplist{ position:absolute;  top:22px;  left:-1px}
+    .ipt_extxt .x_ico { vertical-align: middle; margin-right: 0.2em; }
+	.ipt_extxt .mini { display: inline-block; *margin-top: -2px; /*for IE7 */ _margin-top: 0; /*for IE6*/ width: 17px; height: 20px; vertical-align: middle; }
+		.ipt_extxt .mini .mini_inc,
+        .ipt_extxt .mini .mini_dec { display: block; width: 17px; height: 10px; _font-size: 0; }
+.std_form .sel { padding: 2px; width: 155px; }
+.std_form .ipt_chk { margin: 0 3px 0 0; vertical-align: bottom; *vertical-align: middle; }
+.std_form .tarea { padding: 0.4em; width: 300px; height: 150px; vertical-align: text-top; }
+.std_form .tarea_tip { margin-left: 85px; line-height: 20px; }
+.std_form .b_area { padding-left: 85px; }
+.std_photo { position: absolute; top: 50px; left: 500px; width: 150px; height: 240px; text-align: center; }
+	.std_photo .photo { display: block; margin-bottom: 12px; padding: 9px 9px 15px; }
+/*------------------------- ICONS -----------------------------*/
+.s_ico,.x_ico, .b_ico, .m_ico { display: inline-block; *display: inline; *zoom: 1; font-size: 0;}
+.s_ico { margin-right: 4px; width: 12px; height: 12px; vertical-align: text-bottom; }
+.s_ico_rep { /*折叠*/ }
+.s_ico_spr { /*展开*/ }
+.s_ico_clh { cursor: pointer; }
+.s_ico_cl { cursor: pointer; }
+.x_ico { width: 16px; height: 16px; }
+.m_ico { width: 32px; height: 32px; }
+.b_ico { width: 57px; height: 57px; }
+/*------------------------- BUTTONS -----------------------------*/
+.btn { width: 75px; height: 23px; line-height: 23px; cursor: pointer; text-align: center; border: 0 none; }
+.b_btn { width: 100px; height: 30px; line-height: 30px; font-weight: 600; cursor: pointer; border: 0 none; }
+.h_btn { width: 156px; height: 43px; cursor: pointer; border: 0 none; }
+/*------------------------- SIDEBAR -----------------------------*/
+.sidebar { position: relative; width: 180px; height: 100%; /*IE中高度无法达到100%*/ }
+	.sidebar .sidebar_item { padding: 5px 16px; font-weight: 600; zoom: 1; }
+	.sidebar .sidebar_foot { position: absolute; bottom: 1px; width: 100%; height: 0px; line-height: 0px; font-size: 0; }
+	.sidebar .n_sub1 { padding: 10px 0; }
+		.sidebar .n_sub1 li { padding: 0 0 0 38px; height: 30px; line-height: 30px; }
+.sidegap { position: relative; width: 6px; height: 100%; /*IE中高度无法达到100%*/ }
+	.sidegap .toggle { position: absolute; left: 0; top: 45%; width: 6px; height: 40px; }
+/*------------------------- LAYOUT -----------------------------*/
+.frame_top { height: 98px; }
+.frame_side { float: left; padding: 10px 0 0 6px; margin-right: -200px; height: 600px; overflow: hidden; /*width: 200px;*/ }
+.frame_main { margin-left: 200px; padding: 10px 0 0; }
+.frame_main_w { margin-left: 16px; }
+.layout { position: relative; width: 100%; height: 100%; }
+	.layout .main_frame { border: 0 none; }
+.layout_l { float: left; /*左定宽，右自适应*/ width: 200px; height: 400px; margin-right: -210px; overflow: scroll; }
+.layout_r { margin-left: 210px; /*左定宽，右自适应*/ }
+.layout_wl { overflow: auto; /*右定宽，左自适应*/ zoom: 1; }
+.layout_wr { float: right; /*右定宽，左自适应*/ margin-left: 10px; width: 270px; }
+.box2 { line-height: 24px; }
+.topline { height: 44px; }
+	.topline .logo { display: inline-block; margin-top: 4px; font-family: arial, helvetica, clean, sans-serif; font-size: 20px; }
+	.topline .comlink { margin: 14px 10px 0 0; }
+	
+.tabbar {
+    background: url("../images/skin1/gradient.jpg") repeat-x scroll 0 -215px transparent;
+}	
+.tabbar { height: 54px; }
+	.tabbar ul { padding: 8px 40px 0; }
+		.tabbar ul li { display: block; float: left; margin-right: 20px; padding-left: 10px; height: 46px; /*cursor: pointer;*/ }
+			.tabbar ul li .m_ico { margin-top: 8px;}
+			.tabbar ul li a { margin-top: 8px; display: inline-block; height: 32px; line-height: 32px; font-weight: 600; }
+			.tabbar ul li span { display: inline-block; width: 10px; height: 46px; }
+			.tabbar ul li * { vertical-align: top; }
+.hr { margin-bottom:10px; height: 0; line-height: 0; font-size: 0; }
+/*------------------------- POP WINDOW -----------------------------*/
+.std_pop { z-index: 999; /*width: 420px;*/ }
+	.std_pop .pop_border { padding: 4px; }
+	.std_pop .pop_title { position:relative;margin-bottom: 4px; height: 20px; line-height: 20px; font-size: 14px; font-weight: 600; }
+		.std_pop .pop_title span { display:inline-block; height:20px; padding-right:20px;overflow: hidden;}
+		.std_pop .pop_title .s_ico { position:absolute; top:4px; right: 0; }
+    .std_pop .pop_main{text-align: center;}
+    .std_pop .pop_content{padding: 8px;}
+	.std_pop .pop_content .td_ico { padding: 20px 0; width: 120px; vertical-align: text-top; }
+	.std_pop .pop_content .td_txt { padding: 20px 14px 20px 0; line-height: 20px;text-align: left; }
+    .std_pop .pop_content .td_txt div{ width: 300px;height: 60px; overflow: auto; white-space: normal; word-wrap: break-word;}
+	.std_pop .pop_content p { padding: 0 10px; line-height: 24px; }
+	.std_pop .pop_foot { margin: 6px auto 4px; text-align: center; }
+    .std_pop .pop_foot input{margin-right: 4px;}
+
+.msg { _display: inline;_zoom:1; padding: 0 20px 0 44px; height: 34px; line-height: 34px; }
+/*------------------------- COMPONENT -----------------------------*/
+.path { line-height: 30px; }
+.std_preview { padding: 10px; width: 780px; height: 100%; overflow: hidden;background: none repeat scroll 0 0 #FFFFFF; box-shadow: 0 0 5px #333333; }
+.std_preview .btn_close { display: block; width: 22px; height: 22px; cursor: pointer; background: url(../images/btn_close.png) 0 0 no-repeat; z-index: 99; }
+.std_preview_tool{ height: 30px;}
+.std_preview_wrap { padding: 5% 10%; line-height: 2em; overflow: auto; }
+	.std_preview_wrap h1 { margin-bottom: 1em; font-size: 24px; font-weight: 600; text-align: center; }
+
+.droplist{ width:110px;  padding:5px 0;  max-height:120px;  overflow:auto;}
+.droplist li{ height:20px;  white-space:nowrap; }
+.droplist li a{ display:block;  padding:0 10px;  height:20px;  line-height:20px;  cursor:pointer}
+/*------------------------- BOX -----------------------------*/
+.sbox { width: 99%; }
+	.sbox .sbox_head { padding: 0 10px 0 20px; height: 28px; line-height: 28px; }
+		.sbox .sbox_head .s_ico { margin-top: 8px; }
+		.sbox .sbox_head .box_title_tab { display: inline-block; *display: inline; *zoom: 1; margin-top: 4px; height: 24px; line-height: 24px; padding: 0 0.8em; }
+		.sbox .sbox_head .cur { background: #fff; }
+	.sbox .sbox_body { padding: 10px 20px; background: #fff; }
+        .sbox p{ margin: 0 ; line-height: 32px;}
+        .sbox .sbox_body li{position: relative; line-height: 32px; height: 32px; overflow: hidden; }
+		.sbox .sbox_body li .li_des { display: block;  margin-right: 80px; overflow: hidden; text-overflow:ellipsis; white-space:nowrap; _white-space: normal; }
+		.sbox .sbox_body li .li_time { position: absolute; margin-left:-80px; top:0; right: 0; width: 70px;}
+        .sbox .droplist li{ height: 20px; }
+/*------------------------- PRE_VIEW -----------------------------*/
+.piclist { position: relative; padding: 10px 0 0; width: 230px; height: 200px; overflow-y: auto; }
+	.piclist dl { display: inline-block; *display: inline; *zoom: 1; width: 66px; *width: 70px; height: 100px; }
+	.piclist dt { margin-top: 4px; width: 64px; height: 16px; line-height: 10px; }
+		.piclist dt input { width: 62px; height: 16px; line-height: 16px; background: #fff; border: 1px solid #fff; color: #666; }
+			.piclist dt input.cur { border-color: #cdcdcd; }
+	.piclist dd { position: relative; width: 62px; height: 62px; border: 1px solid #cdcdcd; background: #fff; }
+		.piclist dd img { width: 62px; height: 62px; }
+		.piclist dd .del { position: absolute; top: 2px; right: 2px; display: block; width: 10px; height: 10px; text-indent: -9999px; background: url('../images/skin1/element.png') no-repeat -469px -27px; }
+		.piclist dd .add { display: block; width: 62px; height: 62px; text-indent: -9999px; background: url("../images/upload_img_bg.png") 1px 1px no-repeat; }
+
+.b_piclist { margin-bottom: 10px; padding: 10px 0 0; width: 550px; height: 300px; }
+.b_piclist dl{ margin: 0 15px 0 0; width: 112px;height: 150px;}
+.b_piclist dt { width: 112px;height: 20px;}
+.b_piclist dt input{ width: 112px;height: 20px; line-height: 20px;border: 1px solid #ccc;}
+.b_piclist dd {width: 112px; height: 112px;}
+    .b_piclist dd img { width: 110px; height: 110px; }
+
+/*------------------------- README -----------------------------*/
+ol.num_list { margin-left: 2em; list-style-type: decimal; }
+	ol.num_list  ol { margin-left: 2em; list-style-type: lower-alpha; }
+/*------------------------- DATACHANGELIST -----------------------------*/
+.dataChangeList { display: inline-block; *display: inline; *zoom: 1; height: 190px; }
+	.dataChangeList .area { float: left; width: 120px; height: 30px; line-height: 30px; }
+	.dataChangeList .break { float: left; padding-top: 60px; width: 30px; height: 80px; text-align: center; vertical-align: top; }
+	.dataChangeList b { margin-bottom: 2px; cursor: pointer; }
+	.dataChangeList  select { width: 120px; height: 140px; }
+/*------------------------- TAB -----------------------------*/
+.tab{}
+.tab_head{ position: relative;padding: 0 20px;height: 25px;background: transparent url('../images/skin1/hr.png') 0 23px repeat-x;overflow: hidden;}
+.tab_head a{ display: block; float:left; position: relative;margin-right: -10px; padding:0 24px; width:100px;height: 25px;line-height: 25px;background: url('../images/skin1/element.png') 0 -347px no-repeat;
+    overflow:hidden;text-overflow:ellipsis;white-space: nowrap;text-align: center;z-index: 1;}
+.tab_head a.on{ background-position: 0 -296px;z-index: 99;cursor: default;}
+.tab_body{ padding: 20px; min-height: 400px;}

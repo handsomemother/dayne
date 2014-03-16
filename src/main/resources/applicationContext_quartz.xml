@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                      http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	<!-- 搜索包过程 -->
+	<context:component-scan base-package="cn.ac.iscas.gz.task" />
+	
+	<!-- Spring Quartz 配置 -->
+ 	 <bean id="highSchedulerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="concurrent" value="false"/> 
+        <property name="targetObject" ref="highTask"/>
+        <property name="targetMethod" value="scheduleJob"/>
+    </bean>
+    <bean id="middleSchedulerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="concurrent" value="false"/> 
+        <property name="targetObject" ref="middleTask"/>
+        <property name="targetMethod" value="scheduleJob"/>
+    </bean>
+    <bean id="lowSchedulerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="concurrent" value="false"/> 
+        <property name="targetObject" ref="lowTask"/>
+        <property name="targetMethod" value="scheduleJob"/>
+    </bean>
+    
+    <!--高频触发器  -->
+    <bean id="highCronTrigger" class="cn.ac.iscas.gz.task.DynamicCronTriggerBean">
+      	<!-- 高频 -->
+        <property name="monitoringLevel" value="1"/>
+        <property name="jobDetail" ref="highSchedulerJobDetail"/>
+        <property name="timerService" ref="timerService"/>
+    </bean>
+    <bean id="middleCronTrigger" class="cn.ac.iscas.gz.task.DynamicCronTriggerBean">
+      	<!-- 中频 -->
+        <property name="monitoringLevel" value="2"/>
+        <property name="jobDetail" ref="middleSchedulerJobDetail"/>
+        <property name="timerService" ref="timerService"/>
+    </bean>
+        <bean id="lowCronTrigger" class="cn.ac.iscas.gz.task.DynamicCronTriggerBean">
+      	<!-- 低频 -->
+        <property name="monitoringLevel" value="3"/>
+        <property name="jobDetail" ref="lowSchedulerJobDetail"/>
+        <property name="timerService" ref="timerService"/>
+    </bean>
+       
+    <bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+    	<!-- 保证bean初始化，延迟20秒执行 -->
+    	<property name="startupDelay" value="20"/>
+        <property name="triggers">
+            <list>
+            	<!-- 触发器名字暂时不能改，为常量具体参考CommonConstant -->
+                <ref local="highCronTrigger"/>
+                <ref local="middleCronTrigger"/>
+                <ref local="lowCronTrigger"/>
+            </list>
+        </property>
+	</bean>
+	
+</beans>
